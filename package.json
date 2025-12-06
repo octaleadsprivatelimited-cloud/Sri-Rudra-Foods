@@ -1,0 +1,14 @@
+{
+  "name": "sri-rudra-foods",
+  "version": "1.0.0",
+  "description": "Sri Rudra Foods - Premium Spices & Masalas E-commerce Platform",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install"
+  },
+  "keywords": ["ecommerce", "spices", "masalas"],
+  "author": "",
+  "license": "ISC"
+}
+
