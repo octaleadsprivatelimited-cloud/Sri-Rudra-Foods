@@ -11,19 +11,19 @@ const Home = () => {
       name: 'Ramesh Kumar',
       text: 'Excellent quality spices! The taste is authentic and fresh. My family loves cooking with Sri Rudra Foods products.',
       rating: 5,
-      location: 'Hyderabad',
+      location: 'Nellore',
     },
     {
       name: 'Priya Reddy',
       text: 'Best masalas in town. Highly recommended! The packaging is great and the flavors are amazing.',
       rating: 5,
-      location: 'Vijayawada',
+      location: 'Nellore',
     },
     {
       name: 'Suresh Naidu',
       text: 'Organic and pure. My family loves the products. Fast delivery and excellent customer service.',
       rating: 5,
-      location: 'Visakhapatnam',
+      location: 'Nellore',
     },
   ]
 
@@ -75,7 +75,7 @@ const Home = () => {
                 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-white"
               >
                 <span className="text-white">
-                  Premium Spices
+                  Premium <span className="text-primary font-bold">Arogya Spices</span>
                 </span>
                 <br />
                 <span className="text-white">for Authentic</span>
@@ -93,7 +93,7 @@ const Home = () => {
                 className="text-base md:text-lg text-white/90 mb-6 leading-relaxed max-w-xl mx-auto lg:mx-0"
               >
                 Experience the rich, aromatic taste of traditional Indian spices. 
-                <span className="font-semibold text-white"> Freshly ground, organically sourced,</span> and delivered to your doorstep.
+                <span className="font-semibold text-white"> Freshly ground, organically sourced <span className="text-primary font-bold">Arogya Spices</span>,</span> and delivered to your doorstep.
               </motion.p>
 
               {/* Features List */}

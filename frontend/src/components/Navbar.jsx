@@ -50,7 +50,9 @@ const Navbar = () => {
               <h1 className="text-xl md:text-2xl font-extrabold text-gray-900 leading-tight">
                 Sri Rudra Foods
               </h1>
-              <p className="text-xs text-gray-500 hidden sm:block">Authentic Indian Spices</p>
+              <p className="text-xs font-bold text-primary hidden sm:block">
+                <span className="bg-primary/10 px-2 py-0.5 rounded-md">Arogya Spices</span>
+              </p>
             </div>
           </Link>
 

@@ -130,7 +130,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Address</p>
                   <p className="text-white">
-                    Hyderabad, Telangana<br />
+                    Nellore, Andhra Pradesh<br />
                     India
                   </p>
                 </div>

@@ -169,7 +169,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1 text-gray-800">Address</h3>
                   <p className="text-gray-600">
-                    Hyderabad, Telangana<br />
+                    Nellore, Andhra Pradesh<br />
                     India
                   </p>
                 </div>
