@@ -130,7 +130,9 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Address</p>
                   <p className="text-white">
-                    Nellore, Andhra Pradesh<br />
+                    Arogya Naturals<br />
+                    Muthukuru Village, Muthukuru Mandal<br />
+                    Nellore District, Andhra Pradesh<br />
                     India
                   </p>
                 </div>

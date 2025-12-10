@@ -169,7 +169,9 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1 text-gray-800">Address</h3>
                   <p className="text-gray-600">
-                    Nellore, Andhra Pradesh<br />
+                    Arogya Naturals<br />
+                    Muthukuru Village, Muthukuru Mandal<br />
+                    Nellore District, Andhra Pradesh<br />
                     India
                   </p>
                 </div>
@@ -198,6 +200,35 @@ const Contact = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Google Maps Section */}
+      <section className="container mx-auto px-4 py-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm"
+        >
+          <h2 className="text-2xl font-bold mb-6 text-gray-800">Find Us on Map</h2>
+          <div className="w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden border border-gray-300">
+            <iframe
+              src="https://www.google.com/maps?q=Muthukuru+Village,+Muthukuru+Mandal,+Nellore+District,+Andhra+Pradesh,+India&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Arogya Naturals Location - Muthukuru Village, Muthukuru Mandal, Nellore District"
+            ></iframe>
+          </div>
+          <p className="text-gray-600 text-sm mt-4 text-center">
+            <strong>Arogya Naturals</strong><br />
+            Muthukuru Village, Muthukuru Mandal, Nellore District, Andhra Pradesh, India
+          </p>
+        </motion.div>
+      </section>
       </div>
     </div>
   )

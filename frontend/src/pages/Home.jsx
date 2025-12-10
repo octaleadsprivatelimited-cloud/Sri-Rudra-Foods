@@ -225,7 +225,7 @@ const Home = () => {
       {/* Features Section - Clean & Modern */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
             {/* Feature 1 - Premium Quality */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -297,7 +297,7 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {categories.map((category, index) => {
               const categoryProducts = products.filter(p => p.category === category.slug)
               return (
@@ -364,7 +364,7 @@ const Home = () => {
           </motion.div>
 
           {topProducts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {topProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
@@ -447,7 +447,7 @@ const Home = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
