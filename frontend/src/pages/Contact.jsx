@@ -75,8 +75,23 @@ const Contact = () => {
       </section>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="relative container mx-auto px-4 py-12 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/images/Indian_Spices_Health_Benefits.webp)',
+            }}
+          ></div>
+        </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/3 via-transparent to-secondary/3 rounded-full blur-3xl"></div>
+        
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -202,13 +217,28 @@ const Contact = () => {
       </div>
 
       {/* Google Maps Section */}
-      <section className="container mx-auto px-4 py-12">
+      <section className="relative container mx-auto px-4 py-12 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/images/Indian_Spices_Health_Benefits.webp)',
+            }}
+          ></div>
+        </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/3 via-transparent to-secondary/3 rounded-full blur-3xl"></div>
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm"
+          className="relative z-10 bg-white rounded-lg p-6 border border-gray-200 shadow-sm"
         >
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Find Us on Map</h2>
           <div className="w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden border border-gray-300">

@@ -22,27 +22,28 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 py-10 relative z-10">
+      <div className="container mx-auto px-4 py-6 md:py-8 relative z-10">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2 text-white">
-                Sri Rudra Foods
-              </h3>
-              <div className="w-12 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+            <div className="mb-4">
+              <img 
+                src="/images/logo.png"
+                alt="Sri Rudra Foods Logo" 
+                className="w-24 h-24 md:w-32 md:h-32 object-contain"
+              />
             </div>
-            <p className="text-gray-200 leading-relaxed mb-6">
-              Premium quality spices and masalas for authentic Indian flavors. Bringing traditional taste to your kitchen.
+            <p className="text-gray-200 leading-relaxed mb-4 text-sm">
+              Premium quality spices and masalas for authentic Indian flavors.
             </p>
-            <div className="space-y-3">
+            <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
-                <FiAward className="text-secondary text-lg" />
+                <FiShield className="text-primary text-base" />
                 <span className="text-gray-200">FSSAI Certified</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
-                <FiShield className="text-primary text-lg" />
+                <div className="w-4 h-4 rounded-full bg-primary border-2 border-primary"></div>
                 <span className="text-gray-200">100% Organic</span>
               </div>
             </div>
@@ -50,11 +51,11 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
+            <h4 className="text-base font-bold mb-4 text-white relative inline-block pb-2">
               Quick Links
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               <li>
                 <Link 
                   to="/" 
@@ -96,40 +97,34 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
+            <h4 className="text-base font-bold mb-4 text-white relative inline-block pb-2">
               Contact Info
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-3">
               <li className="flex items-start gap-3 group">
-                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
-                  <FiPhone className="text-primary text-lg" />
-                </div>
+                <FiPhone className="text-primary text-lg mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Phone</p>
-                  <a href="tel:+919876543210" className="text-white hover:text-primary transition-colors font-medium">
+                  <a href="tel:+919876543210" className="text-white hover:text-primary transition-colors text-sm font-medium">
                     +91 98765 43210
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="w-10 h-10 bg-secondary/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-secondary/30 transition-colors">
-                  <FiMail className="text-secondary text-lg" />
-                </div>
+                <FiMail className="text-primary text-lg mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Email</p>
-                  <a href="mailto:info@srirudrafoods.com" className="text-white hover:text-secondary transition-colors break-all font-medium">
+                  <a href="mailto:info@srirudrafoods.com" className="text-white hover:text-primary transition-colors break-all text-sm font-medium">
                     info@srirudrafoods.com
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3 group">
-                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/30 transition-colors">
-                  <FiMapPin className="text-primary text-lg" />
-                </div>
+                <FiMapPin className="text-primary text-lg mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Address</p>
-                  <p className="text-white">
+                  <p className="text-white text-sm leading-relaxed">
                     Arogya Naturals<br />
                     Muthukuru Village, Muthukuru Mandal<br />
                     Nellore District, Andhra Pradesh<br />
@@ -142,30 +137,40 @@ const Footer = () => {
 
           {/* Business Hours */}
           <div>
-            <h4 className="text-lg font-bold mb-6 text-white relative inline-block">
+            <h4 className="text-base font-bold mb-4 text-white relative inline-block pb-2">
               Business Hours
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-transparent"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary"></span>
             </h4>
-            <div className="space-y-4">
-              <div className="p-4 bg-white/10 rounded-xl border border-white/20 backdrop-blur-sm">
-                <p className="text-gray-200 font-semibold mb-2">Monday - Saturday</p>
-                <p className="text-white text-lg">9:00 AM - 7:00 PM</p>
+            <div className="space-y-3">
+              <div className="p-3 bg-white/10 rounded-lg border border-white/20 backdrop-blur-sm">
+                <p className="text-gray-200 font-semibold mb-1 text-sm">Monday - Saturday</p>
+                <p className="text-white text-base">9:00 AM - 7:00 PM</p>
               </div>
-              <div className="p-4 bg-white/10 rounded-xl border border-white/20 backdrop-blur-sm">
-                <p className="text-gray-200 font-semibold mb-2">Sunday</p>
-                <p className="text-white text-lg">10:00 AM - 5:00 PM</p>
+              <div className="p-3 bg-white/10 rounded-lg border border-white/20 backdrop-blur-sm">
+                <p className="text-gray-200 font-semibold mb-1 text-sm">Sunday</p>
+                <p className="text-white text-base">10:00 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-200 text-sm">
-              &copy; {new Date().getFullYear()} <span className="text-primary font-semibold">Sri Rudra Foods</span>. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6 text-sm">
+        <div className="border-t border-white/20 pt-3">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm">
+              <p className="text-gray-200">
+                &copy; {new Date().getFullYear()} <span className="text-primary font-semibold">Sri Rudra Foods</span>. All rights reserved. Developed by{' '}
+                <a 
+                  href="https://octaleads.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-white transition-colors font-semibold"
+                >
+                  Octaleads Private Limited
+                </a>
+              </p>
+            </div>
+            <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm">
               <Link to="/about" className="text-gray-200 hover:text-white transition-colors">
                 Privacy Policy
               </Link>

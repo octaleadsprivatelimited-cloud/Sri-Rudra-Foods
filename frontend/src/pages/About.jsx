@@ -155,26 +155,16 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="relative py-20 bg-gray-50 overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/Indian_Spices_Health_Benefits.webp)',
-          }}
-        ></div>
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Our Values</h2>
-            <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">Our Values</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -210,26 +200,25 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="relative bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all group"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="relative bg-gradient-to-br from-white to-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-200/50 hover:shadow-2xl hover:border-primary/20 transition-all group"
               >
                 {/* Background Image */}
-                <div className="absolute inset-0 opacity-12 group-hover:opacity-18 transition-opacity">
+                <div className="absolute inset-0 opacity-10 group-hover:opacity-15 transition-opacity">
                   <img
                     src={value.image}
                     alt={value.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                {/* Black Overlay */}
-                <div className="absolute inset-0 bg-black/50"></div>
                 <div className="relative z-10 p-8">
-                  <div className={`w-20 h-20 ${value.bgColor} rounded-2xl flex items-center justify-center mb-6`}>
+                  <div className={`w-20 h-20 ${value.bgColor} rounded-2xl flex items-center justify-center mb-6 shadow-lg`}>
                     <div className={value.iconColor}>
                       {value.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{value.title}</h3>
-                  <p className="text-white/90 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">{value.title}</h3>
+                  <p className="text-gray-700 leading-relaxed">{value.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -238,26 +227,16 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="relative py-20 bg-white overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(/images/Special Masalas.webp)',
-          }}
-        ></div>
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Why Choose Us</h2>
-            <div className="w-20 h-1 bg-white mx-auto rounded-full"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">Why Choose Us</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </motion.div>
 
           <div className="max-w-5xl mx-auto">
@@ -276,12 +255,12 @@ const About = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl p-5 hover:bg-white/20 transition-colors border border-white/20"
+                  className="flex items-center gap-4 bg-gradient-to-r from-white to-gray-50 rounded-xl p-5 hover:shadow-lg transition-all border border-gray-200/50 shadow-md"
                 >
-                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 bg-gradient-to-r from-primary to-red-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
                     <FiCheck className="text-white text-lg" />
                   </div>
-                  <span className="text-white font-semibold text-lg">{feature}</span>
+                  <span className="text-gray-900 font-bold text-lg">{feature}</span>
                 </motion.div>
               ))}
             </div>

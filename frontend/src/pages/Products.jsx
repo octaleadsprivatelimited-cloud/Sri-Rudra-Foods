@@ -60,11 +60,27 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-8 md:py-12">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Sidebar Filters - Desktop */}
-          <aside className="hidden lg:block w-64 flex-shrink-0">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
+      <div className="relative container mx-auto px-4 py-8 md:py-12 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: 'url(/images/Indian_Spices_Health_Benefits.webp)',
+            }}
+          ></div>
+        </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/3 via-transparent to-secondary/3 rounded-full blur-3xl"></div>
+        
+        <div className="relative z-10">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Sidebar Filters - Desktop */}
+            <aside className="hidden lg:block w-64 flex-shrink-0">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
               <h2 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <FiFilter className="text-primary" />
                 Categories
@@ -91,11 +107,11 @@ const Products = () => {
                   <span className="font-semibold text-gray-900">{filteredProducts.length}</span> products found
                 </p>
               </div>
-            </div>
-          </aside>
+              </div>
+            </aside>
 
-          {/* Main Content */}
-          <div className="flex-1">
+            {/* Main Content */}
+            <div className="flex-1">
             {/* Mobile Filter Toggle */}
             <div className="lg:hidden mb-6">
               <button
@@ -215,6 +231,7 @@ const Products = () => {
                 ))}
               </div>
             )}
+            </div>
           </div>
         </div>
       </div>

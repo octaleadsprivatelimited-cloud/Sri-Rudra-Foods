@@ -9,7 +9,7 @@ export const products = [
     price: 150,
     category: 'powders',
     subCategory: 'turmeric-powder',
-    image: '/images/Turmeric Powder.jpg',
+    image: '/images/product-1.jpeg',
     inStock: true,
   },
   {
@@ -20,7 +20,7 @@ export const products = [
     price: 180,
     category: 'powders',
     subCategory: 'chilli-powder',
-    image: '/images/Chilli Powder.webp',
+    image: '/images/product-2.jpeg',
     inStock: true,
   },
   {
@@ -31,7 +31,7 @@ export const products = [
     price: 120,
     category: 'powders',
     subCategory: 'coriander-powder',
-    image: '/images/Coriander Powder.jpg',
+    image: '/images/product-3.jpeg',
     inStock: true,
   },
   {
@@ -42,7 +42,7 @@ export const products = [
     price: 170,
     category: 'powders',
     subCategory: 'pepper-powder',
-    image: '/images/Pepper Powder.jpg',
+    image: '/images/product-4.jpeg',
     inStock: true,
   },
   
@@ -55,7 +55,7 @@ export const products = [
     price: 200,
     category: 'south-indian',
     subCategory: 'sambar-powder',
-    image: '/images/Sambar Powder.webp',
+    image: '/images/product-5.jpeg',
     inStock: true,
   },
   {
@@ -66,7 +66,7 @@ export const products = [
     price: 190,
     category: 'south-indian',
     subCategory: 'rasam-powder',
-    image: '/images/Rasam Powder.webp',
+    image: '/images/product-6.jpeg',
     inStock: true,
   },
   
@@ -79,7 +79,7 @@ export const products = [
     price: 220,
     category: 'meat-masala',
     subCategory: 'chicken-masala',
-    image: '/images/Chicken Masala.webp',
+    image: '/images/product-7.jpeg',
     inStock: true,
   },
   {
@@ -90,7 +90,7 @@ export const products = [
     price: 240,
     category: 'meat-masala',
     subCategory: 'mutton-masala',
-    image: '/images/Mutton Masala , Meat Masala.jpg',
+    image: '/images/product-8.jpeg',
     inStock: true,
   },
   
@@ -103,7 +103,7 @@ export const products = [
     price: 250,
     category: 'special-masala',
     subCategory: 'garam-masala',
-    image: '/images/Garam Masala.jpg',
+    image: '/images/product-9.jpeg',
     inStock: true,
   },
   {
@@ -114,7 +114,7 @@ export const products = [
     price: 280,
     category: 'special-masala',
     subCategory: 'biryani-masala',
-    image: '/images/Biryani Masala.jpeg',
+    image: '/images/product-10.jpeg',
     inStock: true,
   },
   {
@@ -125,7 +125,7 @@ export const products = [
     price: 160,
     category: 'special-masala',
     subCategory: 'chaat-masala',
-    image: '/images/Chaat Masala.webp',
+    image: '/images/product-11.jpeg',
     inStock: true,
   },
 ]
