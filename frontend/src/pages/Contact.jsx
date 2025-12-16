@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import toast from 'react-hot-toast'
+import SEO from '../components/SEO'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -41,9 +42,16 @@ const Contact = () => {
   const whatsappMessage = encodeURIComponent('Hello, I would like to know more about your products.')
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 md:pt-28">
+    <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Contact Us - Sri Rudra Foods | Get in Touch"
+        description="Contact Sri Rudra Foods for premium Indian spices and masalas. Reach us via phone, email, or WhatsApp. Located in Muthukuru Village, Nellore District, Andhra Pradesh. We'd love to hear from you!"
+        keywords="contact Sri Rudra Foods, spice company contact, buy spices contact, Nellore spices contact, Andhra Pradesh spices, spice inquiry, WhatsApp order spices, spice customer service"
+        ogUrl="https://srirudrafoods.com/contact"
+        canonicalUrl="https://srirudrafoods.com/contact"
+      />
       {/* Hero Section with Background Image */}
-      <section className="relative py-16 md:py-24 overflow-hidden min-h-[350px] flex items-center">
+      <section className="relative py-8 md:py-12 overflow-hidden min-h-[200px] md:min-h-[250px] flex items-center mt-14 md:mt-16">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -214,6 +222,7 @@ const Contact = () => {
             <p>Sunday: 10:00 AM - 5:00 PM</p>
           </div>
         </motion.div>
+        </div>
       </div>
 
       {/* Google Maps Section */}
@@ -241,7 +250,7 @@ const Contact = () => {
           className="relative z-10 bg-white rounded-lg p-6 border border-gray-200 shadow-sm"
         >
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Find Us on Map</h2>
-          <div className="w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden border border-gray-300">
+          <div className="w-full h-[300px] md:h-[350px] rounded-lg overflow-hidden border border-gray-300">
             <iframe
               src="https://www.google.com/maps?q=Muthukuru+Village,+Muthukuru+Mandal,+Nellore+District,+Andhra+Pradesh,+India&output=embed"
               width="100%"
@@ -259,7 +268,6 @@ const Contact = () => {
           </p>
         </motion.div>
       </section>
-      </div>
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FiShoppingBag, FiAward, FiTruck, FiShield, FiStar, FiArrowRight } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import { products, categories } from '../data/products'
+import SEO from '../components/SEO'
 
 const Home = () => {
   const topProducts = products.slice(0, 6)
@@ -36,6 +37,13 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
+      <SEO
+        title="Sri Rudra Foods - Premium Indian Spices & Masalas | Organic & FSSAI Certified"
+        description="Buy premium quality, 100% organic, FSSAI certified Indian spices and masalas online. Authentic Arogya spices including turmeric, red chili, coriander, cumin powder. Fast delivery across India. Shop now!"
+        keywords="Indian spices online, organic spices, FSSAI certified spices, buy spices online, turmeric powder, red chili powder, coriander powder, cumin powder, masalas online, Arogya spices, Nellore spices, Andhra Pradesh spices, premium spices, traditional Indian spices, spice delivery India"
+        ogUrl="https://srirudrafoods.com/"
+        canonicalUrl="https://srirudrafoods.com/"
+      />
       {/* Hero Section - Modern Design */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -537,9 +545,9 @@ const Home = () => {
               <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 h-full flex flex-col items-center justify-center">
                 {/* Icon Container with Gradient */}
                 <div className="relative mb-4 md:mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-red-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <div className="relative w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br from-primary/10 to-red-600/10 rounded-2xl flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-all duration-300">
-                    <FiAward className="text-primary text-xl md:text-3xl group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-red-600/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                  <div className="relative w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary/10 to-red-600/10 rounded-xl flex items-center justify-center border border-primary/20 group-hover:border-primary/40 transition-all duration-300">
+                    <FiAward className="text-primary text-lg md:text-2xl group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </div>
                 {/* Title */}
@@ -561,9 +569,9 @@ const Home = () => {
               <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 h-full flex flex-col items-center justify-center">
                 {/* Icon Container with Gradient */}
                 <div className="relative mb-4 md:mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <div className="relative w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-2xl flex items-center justify-center border border-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
-                    <FiTruck className="text-blue-600 text-xl md:text-3xl group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                  <div className="relative w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl flex items-center justify-center border border-blue-500/20 group-hover:border-blue-500/40 transition-all duration-300">
+                    <FiTruck className="text-blue-600 text-lg md:text-2xl group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </div>
                 {/* Title */}
@@ -585,9 +593,9 @@ const Home = () => {
               <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/20 h-full flex flex-col items-center justify-center">
                 {/* Icon Container with Gradient */}
                 <div className="relative mb-4 md:mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <div className="relative w-14 h-14 md:w-20 md:h-20 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-2xl flex items-center justify-center border border-green-500/20 group-hover:border-green-500/40 transition-all duration-300">
-                    <FiShield className="text-green-600 text-xl md:text-3xl group-hover:scale-110 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                  <div className="relative w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl flex items-center justify-center border border-green-500/20 group-hover:border-green-500/40 transition-all duration-300">
+                    <FiShield className="text-green-600 text-lg md:text-2xl group-hover:scale-110 transition-transform duration-300" />
                   </div>
                 </div>
                 {/* Title */}

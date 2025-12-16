@@ -18,10 +18,10 @@ const WhatsAppFloat = () => {
     >
       <button
         onClick={handleClick}
-        className="group relative w-16 h-16 bg-[#25D366] rounded-full shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+        className="group relative w-12 h-12 bg-[#25D366] rounded-full shadow-2xl hover:shadow-3xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
         aria-label="Chat on WhatsApp"
       >
-        <FaWhatsapp className="text-white text-3xl" />
+        <FaWhatsapp className="text-white text-xl" />
         
         {/* Pulse Animation */}
         <span className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-75"></span>

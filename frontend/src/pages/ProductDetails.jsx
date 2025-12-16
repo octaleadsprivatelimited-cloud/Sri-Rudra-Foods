@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { FiArrowLeft } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 import { products } from '../data/products'
+import SEO from '../components/SEO'
 
 const ProductDetails = () => {
   const { id } = useParams()
@@ -33,6 +34,17 @@ const ProductDetails = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <SEO
+        title={`${product.name} - Buy Online | Sri Rudra Foods`}
+        description={`${product.description || `Buy premium quality ${product.name} online. 100% organic, FSSAI certified. ${product.teluguName ? `(${product.teluguName})` : ''} Fast delivery across India.`}`}
+        keywords={`${product.name}, ${product.teluguName || ''}, ${product.category}, organic ${product.name}, buy ${product.name} online, premium spices, FSSAI certified, Indian spices, ${product.subCategory || ''}`}
+        ogTitle={`${product.name} - Sri Rudra Foods`}
+        ogDescription={product.description || `Premium quality ${product.name} - 100% organic and FSSAI certified`}
+        ogImage={product.image || '/images/logo.png'}
+        ogUrl={`https://srirudrafoods.com/products/${product.id}`}
+        canonicalUrl={`https://srirudrafoods.com/products/${product.id}`}
+        type="product"
+      />
       <Link
         to="/products"
         className="inline-flex items-center text-gray-600 hover:text-primary mb-4"

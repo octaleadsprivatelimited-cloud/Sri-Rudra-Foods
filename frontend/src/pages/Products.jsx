@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { products, categories as categoryList } from '../data/products'
 import { FiShoppingBag, FiFilter } from 'react-icons/fi'
+import SEO from '../components/SEO'
 
 const categories = [
   { name: 'All Products', slug: '', textColor: 'text-gray-900' },
@@ -31,9 +32,16 @@ const Products = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 md:pt-28">
+    <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="All Products - Premium Indian Spices & Masalas | Sri Rudra Foods"
+        description="Browse our complete collection of premium Indian spices and masalas. Organic, FSSAI certified powders including turmeric, red chili, coriander, cumin, and more. Shop authentic spices online."
+        keywords="all spices, Indian spices collection, spice products, masala products, turmeric powder, red chili powder, coriander powder, cumin powder, spice powders, organic spices online, buy all spices, complete spice collection"
+        ogUrl="https://srirudrafoods.com/products"
+        canonicalUrl="https://srirudrafoods.com/products"
+      />
       {/* Header Section with Background Image */}
-      <div className="relative bg-white border-b border-gray-200 overflow-hidden min-h-[300px]">
+      <div className="relative bg-white border-b border-gray-200 overflow-hidden min-h-[300px] mt-14 md:mt-16">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
