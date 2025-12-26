@@ -3,7 +3,7 @@ import { FiPhone, FiMail, FiMapPin, FiAward, FiShield } from 'react-icons/fi'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const Footer = () => {
-  const whatsappNumber = '919876543210' // Replace with actual number
+  const whatsappNumber = '919100696669' // Replace with actual number
   const whatsappMessage = encodeURIComponent('Hello, I would like to know more about your products.')
 
   return (
@@ -92,6 +92,17 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a 
+                  href="/sitemap.xml" 
+                  className="text-gray-200 hover:text-white transition-all duration-300 flex items-center gap-2 group"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-300"></span>
+                  Sitemap
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -106,8 +117,8 @@ const Footer = () => {
                 <FiPhone className="text-primary text-lg mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Phone</p>
-                  <a href="tel:+919876543210" className="text-white hover:text-primary transition-colors text-sm font-medium">
-                    +91 98765 43210
+                  <a href="tel:+919100696669" className="text-white hover:text-primary transition-colors text-sm font-medium">
+                    +91-9100696669
                   </a>
                 </div>
               </li>
@@ -125,10 +136,10 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm mb-1">Address</p>
                   <p className="text-white text-sm leading-relaxed">
-                    Arogya Naturals<br />
-                    Muthukuru Village, Muthukuru Mandal<br />
-                    Nellore District, Andhra Pradesh<br />
-                    India
+                    Krishnapatnam,<br />
+                    Muthukur Mandal,<br />
+                    SPSR Nellore District,<br />
+                    Andhra Pradesh, India
                   </p>
                 </div>
               </li>
@@ -156,28 +167,19 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-3">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-2">
-            <div className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm">
-              <p className="text-gray-200">
-                &copy; {new Date().getFullYear()} <span className="text-primary font-semibold">Sri Rudra Foods</span>. All rights reserved. Developed by{' '}
+          <div className="flex flex-col items-center justify-center gap-2">
+            <div className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm text-center">
+              <p className="text-white">
+                &copy; {new Date().getFullYear()} <span className="text-white font-semibold">Sri Rudra Foods</span>. All rights reserved. Developed by{' '}
                 <a 
                   href="https://octaleads.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-white transition-colors font-semibold"
+                  className="text-white hover:text-gray-200 transition-colors font-semibold"
                 >
                   Octaleads Private Limited
                 </a>
               </p>
-            </div>
-            <div className="flex items-center gap-4 md:gap-6 text-xs md:text-sm">
-              <Link to="/about" className="text-gray-200 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <span className="text-gray-400">|</span>
-              <Link to="/contact" className="text-gray-200 hover:text-white transition-colors">
-                Terms & Conditions
-              </Link>
             </div>
           </div>
         </div>

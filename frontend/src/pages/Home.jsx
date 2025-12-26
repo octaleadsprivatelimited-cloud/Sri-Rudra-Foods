@@ -29,7 +29,7 @@ const Home = () => {
   ]
 
   const handleProductClick = (product) => {
-    const phoneNumber = '919876543210' // Replace with your WhatsApp number
+    const phoneNumber = '919100696669' // Replace with your WhatsApp number
     const message = `Hello! I'm interested in ordering ${product.name}.`
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -38,11 +38,23 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       <SEO
-        title="Sri Rudra Foods - Premium Indian Spices & Masalas | Organic & FSSAI Certified"
-        description="Buy premium quality, 100% organic, FSSAI certified Indian spices and masalas online. Authentic Arogya spices including turmeric, red chili, coriander, cumin powder. Fast delivery across India. Shop now!"
-        keywords="Indian spices online, organic spices, FSSAI certified spices, buy spices online, turmeric powder, red chili powder, coriander powder, cumin powder, masalas online, Arogya spices, Nellore spices, Andhra Pradesh spices, premium spices, traditional Indian spices, spice delivery India"
+        title="Sri Rudra Foods - Premium Indian Spices & Masalas | Organic & FSSAI Certified | Buy Online"
+        description="Buy premium quality, 100% organic, FSSAI certified Indian spices and masalas online from Sri Rudra Foods. Authentic Arogya spices including turmeric powder, red chili powder, coriander powder, cumin powder, garam masala, sambar powder, rasam powder, biryani masala, chicken masala, mutton masala, chaat masala, and pepper powder. Fast delivery across India. Shop authentic Indian spices and masalas now!"
+        keywords="Indian spices online, organic spices, FSSAI certified spices, buy spices online, turmeric powder, red chili powder, coriander powder, cumin powder, masalas online, Arogya spices, Nellore spices, Andhra Pradesh spices, premium spices, traditional Indian spices, spice delivery India, Krishnapatnam spices, Muthukur spices, SPSR Nellore spices, buy Indian masalas, organic spice powders, authentic Indian flavors, spice company India, online spice store, wholesale spices, retail spices, Indian cooking spices, South Indian masalas, North Indian spices, garam masala, sambar powder, rasam powder, biryani masala, chicken masala, mutton masala, chaat masala, pepper powder, Indian spice manufacturer, spice exporter India, organic food products, natural spices, pure spices, traditional masalas, homemade spices, Indian cuisine spices, spice blends, curry powders, Indian grocery online, buy spices India, spice shop online, premium masalas, authentic spices, Indian food ingredients, cooking spices online"
         ogUrl="https://srirudrafoods.com/"
         canonicalUrl="https://srirudrafoods.com/"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Sri Rudra Foods",
+          "url": "https://srirudrafoods.com",
+          "description": "Premium quality, 100% organic, FSSAI certified Indian spices and masalas",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://srirudrafoods.com/products?search={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }}
       />
       {/* Hero Section - Modern Design */}
       <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">

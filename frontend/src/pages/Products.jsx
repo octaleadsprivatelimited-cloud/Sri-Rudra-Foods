@@ -25,7 +25,7 @@ const Products = () => {
     : products
 
   const handleProductClick = (product) => {
-    const phoneNumber = '919876543210' // Replace with your WhatsApp number
+    const phoneNumber = '919100696669' // Replace with your WhatsApp number
     const message = `Hello! I'm interested in ordering ${product.name}.`
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -34,11 +34,18 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="All Products - Premium Indian Spices & Masalas | Sri Rudra Foods"
-        description="Browse our complete collection of premium Indian spices and masalas. Organic, FSSAI certified powders including turmeric, red chili, coriander, cumin, and more. Shop authentic spices online."
-        keywords="all spices, Indian spices collection, spice products, masala products, turmeric powder, red chili powder, coriander powder, cumin powder, spice powders, organic spices online, buy all spices, complete spice collection"
+        title="All Products - Premium Indian Spices & Masalas Collection | Sri Rudra Foods"
+        description="Browse our complete collection of premium Indian spices and masalas. Organic, FSSAI certified powders including turmeric powder, red chili powder, coriander powder, cumin powder, garam masala, sambar powder, rasam powder, biryani masala, chicken masala, mutton masala, chaat masala, and pepper powder. Shop authentic spices online with fast delivery across India."
+        keywords="all spices, Indian spices collection, spice products, masala products, turmeric powder, red chili powder, coriander powder, cumin powder, spice powders, organic spices online, buy all spices, complete spice collection, Indian masalas collection, spice catalog, spice inventory, all Indian spices, complete spice list, spice varieties, masala varieties, spice categories, Indian spice products, organic spice collection, FSSAI certified spices collection, premium spice collection, traditional spice collection, authentic spice collection, spice shop products, online spice catalog, spice product list, masala product list, Indian cooking spices, spice blends collection, curry powders collection, Indian grocery products, spice store products, wholesale spice products, retail spice products"
         ogUrl="https://srirudrafoods.com/products"
         canonicalUrl="https://srirudrafoods.com/products"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "All Products - Sri Rudra Foods",
+          "description": "Complete collection of premium Indian spices and masalas",
+          "url": "https://srirudrafoods.com/products"
+        }}
       />
       {/* Header Section with Background Image */}
       <div className="relative bg-white border-b border-gray-200 overflow-hidden min-h-[300px] mt-14 md:mt-16">

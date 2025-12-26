@@ -12,12 +12,13 @@ const Contact = () => {
     phone: '',
     message: '',
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     
     if (!formData.name || !formData.message) {
@@ -25,30 +26,86 @@ const Contact = () => {
       return
     }
 
-    const phoneNumber = '919876543210' // Replace with your WhatsApp number
-    let message = `Hello! I have a query:\n\n`
-    message += `Name: ${formData.name}\n`
-    if (formData.email) message += `Email: ${formData.email}\n`
-    if (formData.phone) message += `Phone: ${formData.phone}\n`
-    message += `Message: ${formData.message}`
+    setIsSubmitting(true)
 
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
-    window.open(whatsappUrl, '_blank')
-    toast.success('Opening WhatsApp...')
-    setFormData({ name: '', email: '', phone: '', message: '' })
+    try {
+      const formDataToSend = new FormData()
+      formDataToSend.append('name', formData.name)
+      formDataToSend.append('email', formData.email || '')
+      formDataToSend.append('phone', formData.phone || '')
+      formDataToSend.append('message', formData.message)
+
+      const response = await fetch('https://formspree.io/f/xlgeddrv', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json',
+        },
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        toast.success('Message sent successfully! We will get back to you soon.')
+        setFormData({ name: '', email: '', phone: '', message: '' })
+      } else {
+        if (data.errors) {
+          toast.error(data.errors.map(error => error.message).join(', '))
+        } else {
+          throw new Error(data.error || 'Failed to send message')
+        }
+      }
+    } catch (error) {
+      toast.error('Failed to send message. Please try again or contact us via WhatsApp.')
+      console.error('Form submission error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  const whatsappNumber = '919876543210'
+  const whatsappNumber = '919100696669'
   const whatsappMessage = encodeURIComponent('Hello, I would like to know more about your products.')
 
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Contact Us - Sri Rudra Foods | Get in Touch"
-        description="Contact Sri Rudra Foods for premium Indian spices and masalas. Reach us via phone, email, or WhatsApp. Located in Muthukuru Village, Nellore District, Andhra Pradesh. We'd love to hear from you!"
-        keywords="contact Sri Rudra Foods, spice company contact, buy spices contact, Nellore spices contact, Andhra Pradesh spices, spice inquiry, WhatsApp order spices, spice customer service"
+        title="Contact Us - Sri Rudra Foods | Get in Touch | Phone, Email, WhatsApp"
+        description="Contact Sri Rudra Foods for premium Indian spices and masalas. Reach us via phone +91-9100696669, email info@srirudrafoods.com, or WhatsApp. Located in Krishnapatnam, Muthukur Mandal, SPSR Nellore District, Andhra Pradesh, India. Business hours: Monday-Saturday 9 AM-7 PM, Sunday 10 AM-5 PM. We'd love to hear from you!"
+        keywords="contact Sri Rudra Foods, spice company contact, buy spices contact, Nellore spices contact, Andhra Pradesh spices, spice inquiry, WhatsApp order spices, spice customer service, Krishnapatnam spice contact, Muthukur spices contact, SPSR Nellore spice company, spice company phone number, spice company email, spice company address, Indian spice contact, organic spice contact, spice order inquiry, spice customer support, spice helpline, spice WhatsApp number, spice business contact, wholesale spice contact, retail spice contact, spice delivery contact, spice company location"
         ogUrl="https://srirudrafoods.com/contact"
         canonicalUrl="https://srirudrafoods.com/contact"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Sri Rudra Foods",
+          "description": "Contact information for Sri Rudra Foods",
+          "url": "https://srirudrafoods.com/contact",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Sri Rudra Foods",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Krishnapatnam",
+              "addressLocality": "Muthukur Mandal",
+              "addressRegion": "SPSR Nellore District",
+              "addressCountry": "IN"
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91-9100696669",
+                "contactType": "Customer Service",
+                "availableLanguage": ["en", "te", "hi"],
+                "areaServed": "IN"
+              },
+              {
+                "@type": "ContactPoint",
+                "email": "info@srirudrafoods.com",
+                "contactType": "Customer Service"
+              }
+            ]
+          }
+        }}
       />
       {/* Hero Section with Background Image */}
       <section className="relative py-8 md:py-12 overflow-hidden min-h-[200px] md:min-h-[250px] flex items-center mt-14 md:mt-16">
@@ -156,10 +213,11 @@ const Contact = () => {
             </div>
             <button
               type="submit"
+              disabled={isSubmitting}
               style={{ backgroundColor: '#DC2626', color: '#FFFFFF' }}
-              className="w-full py-3 px-4 rounded-lg font-semibold hover:opacity-90 transition-all"
+              className="w-full py-3 px-4 rounded-lg font-semibold hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send via WhatsApp
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </motion.div>
@@ -177,7 +235,7 @@ const Contact = () => {
                 <FiPhone className="text-2xl text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-1 text-gray-800">Phone</h3>
-                  <p className="text-gray-600">+91 98765 43210</p>
+                  <p className="text-gray-600">+91-9100696669</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -192,10 +250,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-1 text-gray-800">Address</h3>
                   <p className="text-gray-600">
-                    Arogya Naturals<br />
-                    Muthukuru Village, Muthukuru Mandal<br />
-                    Nellore District, Andhra Pradesh<br />
-                    India
+                    Krishnapatnam,<br />
+                    Muthukur Mandal,<br />
+                    SPSR Nellore District,<br />
+                    Andhra Pradesh, India
                   </p>
                 </div>
               </div>
@@ -252,19 +310,19 @@ const Contact = () => {
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Find Us on Map</h2>
           <div className="w-full h-[300px] md:h-[350px] rounded-lg overflow-hidden border border-gray-300">
             <iframe
-              src="https://www.google.com/maps?q=Muthukuru+Village,+Muthukuru+Mandal,+Nellore+District,+Andhra+Pradesh,+India&output=embed"
+              src="https://www.google.com/maps?q=Krishnapatnam,+Muthukur+Mandal,+SPSR+Nellore+District,+Andhra+Pradesh,+India&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Arogya Naturals Location - Muthukuru Village, Muthukuru Mandal, Nellore District"
+              title="Sri Rudra Foods Location - Krishnapatnam, Muthukur Mandal, SPSR Nellore District"
             ></iframe>
           </div>
           <p className="text-gray-600 text-sm mt-4 text-center">
-            <strong>Arogya Naturals</strong><br />
-            Muthukuru Village, Muthukuru Mandal, Nellore District, Andhra Pradesh, India
+            <strong>Sri Rudra Foods</strong><br />
+            Krishnapatnam, Muthukur Mandal, SPSR Nellore District, Andhra Pradesh, India
           </p>
         </motion.div>
       </section>

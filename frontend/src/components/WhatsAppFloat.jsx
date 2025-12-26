@@ -2,7 +2,7 @@ import { FaWhatsapp } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 const WhatsAppFloat = () => {
-  const whatsappNumber = '919876543210'
+  const whatsappNumber = '919100696669'
   const whatsappMessage = encodeURIComponent('Hello! I would like to know more about your products.')
 
   const handleClick = () => {

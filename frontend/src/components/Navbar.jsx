@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const location = useLocation()
   
-  const whatsappNumber = '919876543210'
+  const whatsappNumber = '919100696669'
   const whatsappMessage = encodeURIComponent('Hello! I would like to know more about your products.')
   
   const handleWhatsAppClick = () => {
@@ -123,7 +123,7 @@ const Navbar = () => {
               
               {/* Phone Button - Desktop */}
               <motion.a
-                href="tel:+919876543210"
+                href="tel:+919100696669"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="hidden md:flex items-center gap-2 px-4 py-2.5 bg-primary text-white rounded-lg hover:bg-red-700 transition-all duration-200 shadow-md hover:shadow-lg font-semibold text-sm"
@@ -248,7 +248,7 @@ const Navbar = () => {
                     <span>Chat on WhatsApp</span>
                   </motion.button>
                   <motion.a
-                    href="tel:+919876543210"
+                    href="tel:+919100696669"
                     onClick={() => setIsMenuOpen(false)}
                     whileTap={{ scale: 0.95 }}
                     className="w-full flex items-center justify-center gap-2 px-4 py-3.5 bg-primary text-white rounded-xl font-semibold hover:bg-red-700 transition-all duration-200 shadow-md"

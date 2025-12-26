@@ -6,11 +6,37 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="About Us - Sri Rudra Foods | Premium Indian Spices & Masalas"
-        description="Learn about Sri Rudra Foods - your trusted source for premium quality, 100% organic, FSSAI certified Indian spices and masalas. Discover our story, values, and commitment to authentic flavors from Nellore, Andhra Pradesh."
-        keywords="about Sri Rudra Foods, spice company, organic spice manufacturer, FSSAI certified spices, Arogya Naturals, Nellore spices, Andhra Pradesh spices, Indian spice company, premium spice brand, authentic spices"
+        title="About Us - Sri Rudra Foods | Premium Indian Spices & Masalas Manufacturer"
+        description="Learn about Sri Rudra Foods - your trusted source for premium quality, 100% organic, FSSAI certified Indian spices and masalas. Based in Krishnapatnam, Muthukur Mandal, SPSR Nellore District, Andhra Pradesh. Discover our story, values, mission, vision, and commitment to authentic flavors. We source directly from farmers and use traditional methods to ensure highest quality spices."
+        keywords="about Sri Rudra Foods, spice company, organic spice manufacturer, FSSAI certified spices, Arogya Naturals, Nellore spices, Andhra Pradesh spices, Indian spice company, premium spice brand, authentic spices, Krishnapatnam spice company, Muthukur spices, SPSR Nellore spices, spice manufacturer India, organic spice producer, traditional spice maker, Indian spice business, spice company Andhra Pradesh, premium spice brand India, authentic Indian spices, organic food manufacturer, spice exporter, wholesale spice supplier, retail spice company, Indian spice industry, spice company story, spice company mission, spice company vision, quality spices manufacturer"
         ogUrl="https://srirudrafoods.com/about"
         canonicalUrl="https://srirudrafoods.com/about"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Sri Rudra Foods",
+          "description": "Learn about Sri Rudra Foods - premium Indian spices and masalas manufacturer",
+          "url": "https://srirudrafoods.com/about",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Sri Rudra Foods",
+            "url": "https://srirudrafoods.com",
+            "logo": "https://srirudrafoods.com/images/logo.png",
+            "description": "Premium quality, 100% organic, FSSAI certified Indian spices and masalas",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Krishnapatnam",
+              "addressLocality": "Muthukur Mandal",
+              "addressRegion": "SPSR Nellore District",
+              "addressCountry": "IN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-9100696669",
+              "contactType": "Customer Service"
+            }
+          }
+        }}
       />
       {/* Hero Section with Background Image */}
       <section className="relative py-8 md:py-12 overflow-hidden min-h-[200px] md:min-h-[250px] flex items-center mt-14 md:mt-16">

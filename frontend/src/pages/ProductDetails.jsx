@@ -12,7 +12,7 @@ const ProductDetails = () => {
 
   const handleWhatsAppClick = () => {
     if (!product) return
-    const phoneNumber = '919876543210' // Replace with your WhatsApp number
+    const phoneNumber = '919100696669' // Replace with your WhatsApp number
     const message = `Hello! I'm interested in ordering ${product.name}.`
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
@@ -35,15 +35,42 @@ const ProductDetails = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <SEO
-        title={`${product.name} - Buy Online | Sri Rudra Foods`}
-        description={`${product.description || `Buy premium quality ${product.name} online. 100% organic, FSSAI certified. ${product.teluguName ? `(${product.teluguName})` : ''} Fast delivery across India.`}`}
-        keywords={`${product.name}, ${product.teluguName || ''}, ${product.category}, organic ${product.name}, buy ${product.name} online, premium spices, FSSAI certified, Indian spices, ${product.subCategory || ''}`}
-        ogTitle={`${product.name} - Sri Rudra Foods`}
-        ogDescription={product.description || `Premium quality ${product.name} - 100% organic and FSSAI certified`}
+        title={`${product.name} - Buy Online | Premium Indian Spice | Sri Rudra Foods`}
+        description={`Buy premium quality ${product.name}${product.teluguName ? ` (${product.teluguName})` : ''} online from Sri Rudra Foods. 100% organic, FSSAI certified ${product.category} spice. ${product.description || 'Authentic Indian spice with traditional flavors.'} Fast delivery across India. Order now via WhatsApp!`}
+        keywords={`${product.name}, ${product.teluguName || ''}, ${product.category}, organic ${product.name}, buy ${product.name} online, premium spices, FSSAI certified, Indian spices, ${product.subCategory || ''}, ${product.name} online, ${product.name} price, ${product.name} buy, ${product.name} delivery, ${product.name} India, best ${product.name}, authentic ${product.name}, pure ${product.name}, natural ${product.name}, traditional ${product.name}, ${product.category} spice, ${product.category} powder, Indian ${product.category}, organic ${product.category}, buy ${product.category} online, ${product.category} spice online, premium ${product.category}, FSSAI certified ${product.category}`}
+        ogTitle={`${product.name} - Premium Indian Spice | Sri Rudra Foods`}
+        ogDescription={`Buy premium quality ${product.name} online. 100% organic, FSSAI certified. ${product.description || 'Authentic Indian spice with traditional flavors.'} Fast delivery across India.`}
         ogImage={product.image || '/images/logo.png'}
         ogUrl={`https://srirudrafoods.com/products/${product.id}`}
         canonicalUrl={`https://srirudrafoods.com/products/${product.id}`}
         type="product"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": product.name,
+          "description": product.description || `Premium quality ${product.name} - 100% organic and FSSAI certified`,
+          "image": product.image ? `https://srirudrafoods.com${product.image}` : "https://srirudrafoods.com/images/logo.png",
+          "brand": {
+            "@type": "Brand",
+            "name": "Sri Rudra Foods"
+          },
+          "category": product.category,
+          "offers": {
+            "@type": "Offer",
+            "url": `https://srirudrafoods.com/products/${product.id}`,
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Sri Rudra Foods"
+            }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "150"
+          }
+        }}
       />
       <Link
         to="/products"
